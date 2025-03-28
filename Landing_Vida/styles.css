@@ -1,0 +1,871 @@
+/* ========================================================
+   styles.css
+   ========================================================
+
+   Tabla de Contenido:
+   1. Fuentes Personalizadas
+   2. Reset de Estilos
+   3. Header Section
+   4. Banner Section
+   5. Vida deudor Section
+   6. step Section
+   7. Requisitos section
+   8. Floating Form Section
+   9. Footer Section
+   ======================================================== */
+
+/* ================================ */
+/* 1. Fuentes Personalizadas        */
+/* ================================ */
+   
+/* Definición de la fuente Publico Headline Bold */
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('./Fonts/PublicoHeadline-Bold-Web.woff2') format('woff2'),
+         url('./Fonts/PublicoHeadline-Bold-Web.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* Definición de la fuente Source Sans Pro Regular */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2');  
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  /* Definición de la fuente Source Sans Pro SemiBold */
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-SemiBold.woff2') format('woff2');  
+    font-weight: 600;  
+    font-style: normal;
+  }
+  
+  /* Aplicar Publico Headline a los títulos */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Publico Headline Web', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* Aplicar Source Sans Pro al body y otros textos */
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400; /* Regular */
+  }
+  
+  p, a, li, span, div {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+  }
+
+/* ================================ */
+/* 2. Reset de Estilos              */
+/* ================================ */
+
+ 
+body, h1, h2, h3, p, div, section, header {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:  #343C3D;
+}
+
+body {
+   
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* ================================ */
+/* 3. Header                        */
+/* ================================ */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+    max-height: 50px;
+}
+
+/* ================================ */
+/* 4. Banner Section                  */
+/* ================================ */
+.hero {
+    background: url('images/Banner_hero.jpg') no-repeat center center/cover;
+    height: 40.25vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: #fff;
+    text-align: left;
+}
+
+.texto-container h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 2.5rem;
+    margin-bottom: 25px;
+   
+}
+
+.texto-container p {
+    font-size: 20px;
+   
+    line-height: 2.5rem;
+   
+}
+
+/* Responsive Hero Alignment */
+@media (max-width: 768px) {
+    .hero {
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ================================ */
+/* 5. Vida deudor Section                 */
+/* ================================ */
+
+.information-axa {
+    width: 100%; /* O un ancho específico */
+    display: flex;
+    justify-content: center;
+}
+
+
+.seguro-vida-deudor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    width: 80%;
+}
+
+
+.seguro-vida-deudor p {
+font-size: 20px;
+}
+
+.imagen-container {
+    flex: 1;
+    text-align: center;
+}
+
+.imagen-container img {
+    max-width: 90%;
+    height: auto;
+}
+
+.texto-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.boton-info {
+    display: inline-block;
+    background-color: #00008F; 
+    color: #fff;  
+    padding: 16px 24px;  
+    border: none;  
+    border-radius: 50px;  
+    cursor: pointer;  
+    font-size: 14px;  
+    margin-top: 20px; 
+    box-shadow: 0px -3px 0px 0px #00006D inset;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.boton-info:hover {
+    background-color: #1F1F9C;  
+}
+/* Modificación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .seguro-vida-deudor {
+        flex-direction: column;  
+        width: 100%;
+    }
+
+    .seguro-vida-deudor h1 {
+       font-size: 30px;
+    }
+
+    .imagen-container {
+        order: -1;  
+    }
+
+    .texto-container {
+        text-align: center;
+    }
+}
+.imagen-container img {
+    max-width: 60%;
+     
+}
+
+/* ================================ */
+/* 6. step Section   */
+/* ================================ */
+
+.cont-six {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+
+.six-step {
+    display: flex;
+    background-color: #f0f0f05c;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+}
+
+.left h2 {
+font-size: 36px;
+color: #343C3D;
+}
+.column {
+    padding: 20px;
+}
+
+.left {
+   
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    width: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+}
+
+.right h3
+{
+  color: #00008F;
+}
+
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+ 
+}
+
+
+
+.bg {
+    fill: #FFF;
+    stroke: #ddd;
+    stroke-width: 4;
+}
+
+.progress {
+    fill: none;
+    stroke: #E28972;
+    stroke-width: 4;
+    stroke-dasharray: 113.1;
+    stroke-dashoffset: 113.1;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.number {
+    font-size: 16px;
+    font-weight: bold;
+    fill: #00008F;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 38px;  
+    width: 4px;
+    height: 100%;
+    background-color: #ddd;
+    z-index: 0;
+}
+
+.line-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #E28972;
+    transition: height 1s ease-in-out;
+}
+
+/* Media query para hacerlo responsive */
+@media (max-width: 768px) {
+    .cont-six {
+       
+        width: 95%;
+    }
+    .cont-six h2{
+        font-size: 30px;
+    }
+    .six-step{
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+    .left{
+        text-align: center;
+    }
+   
+}
+
+
+
+
+
+/* ================================ */
+/* 7. Requisitos section */
+/* ================================ */
+
+.requisitos {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;  
+    margin-top: 60px;
+    width: 80%;  
+    margin-left: auto;  
+    margin-right: auto;
+  }
+ 
+  .requisitos-titulo {
+    text-align: center;  
+    margin-bottom: 30px;
+    width: 100%;  
+  }
+ 
+  .requisitos-titulo h2 {
+    font-size: 36px;
+    color: #343c3d;
+  }
+ 
+  .requisitos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;  
+    gap: 20px;
+    width: 100%;  
+  }
+ 
+  .requisito-card {
+    width: calc(33.33% - 20px);
+    text-align: center;  
+    padding: 20px;
+  }
+ 
+  .requisito-card i {
+    font-size: 58px;
+    color: #00008b;
+    margin-bottom: 10px;
+  }
+ 
+  .requisito-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00008b;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro';
+  }
+ 
+  .requisito-card p {
+    font-size: 18px;
+    color: #333;
+  }
+ 
+  /* Media query para hacerlo responsive */
+  @media (max-width: 745px) {
+    .requisito-card {
+      width: calc(50% - 20px);
+    }
+ 
+    .requisitos {
+      align-items: center;  
+    }
+ 
+    .requisitos-titulo {
+      text-align: center;  
+    }
+ 
+    .requisitos-container {
+      justify-content: center;  
+    }
+  }
+ 
+  @media (max-width: 525px) {
+    .requisito-card {
+      width: 100%;
+    }
+  }
+ 
+
+
+/* ================================ */
+/* 8. Floating Form Section         */
+/* ================================ */
+.container {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 28rem;
+    margin: 2rem auto;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+/* Ocultar el formulario */
+.container.oculto {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Botón de cierre (X) en el header-form */
+.cerrar-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.cerrar-form:hover {
+    color: #d1d5db;
+}
+
+/* Botón flotante para reabrir el formulario */
+.floating-button {
+    position: fixed;
+    bottom: 80px;
+    right: 180px;
+    background-color: #d24723;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Se ocultará inicialmente */
+    transition: opacity 0.3s ease-in-out;
+    text-transform: uppercase;
+    z-index: 99;
+}
+
+
+.floating-button:hover{
+    background-color: #D75D3D;
+}
+
+
+.floating-button:not(.oculto) {
+    display: block;
+}
+
+.floating-button.oculto {
+    display: none;
+}
+
+
+
+.header-form {
+    background-color: #4976BA;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    position: relative;
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+
+}
+
+.header-form p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header-form button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.col {
+ flex: 1 1 calc(50% - 1rem);
+ padding: 0 0.5rem;
+ box-sizing: border-box;
+ position: relative;
+
+
+}
+
+
+@media (max-width: 640px) {
+    .col {
+        flex: 1 1 100%;
+    }
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #343C3D;
+}
+
+
+input,
+select
+{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.flex-center {
+    justify-content: center;
+}
+.flex-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-gray-700 {
+    color: #374151;
+}
+
+.checkbox {
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #d1d5db;
+
+
+}
+
+.text-sm
+{
+    font-size: 12px;
+}
+
+
+
+.button {
+    background-color: #d24723;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 3.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #D75D3D;
+}
+
+.oculto {
+    display: none; /* Oculta elementos */
+}
+
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para el estado :focus (cuando el usuario interactúa) */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #00008F;
+    box-shadow: 0 0 5px #00008F;
+    outline: none;
+}
+
+/* Estilos para los errores  */
+.error-message {
+    color: #C91432;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: #C91432;
+    box-shadow: 0 0 5px #C91432;
+}
+
+/* Estilos para diligenciamiento exitoso*/
+input.valid,
+select.valid,
+textarea.valid {
+    border-color: #1CC54F;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none; /* Para Firefox */
+    background-image: url("images/arrow-select.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+}
+
+
+
+
+/* Animation for Floating Form */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Floating Form */
+
+
+@media (max-width: 768px) {
+    .container {
+      width: 100%;
+      right: 0px;
+      overflow-y: scroll;
+      bottom: 0px;
+     
+    }
+    }
+
+
+
+    .floating-button {
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+
+
+
+
+/* ================================ */
+/* 9. Footer                       */
+/* ================================ */
+.footer {
+    background-color: #4976BA;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    margin-bottom: 2rem;
+    width: 80%;
+    margin: 0 auto;
+
+}
+ 
+
+.footer-column {
+    width: 30%;
+    padding: 0 1rem;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    font-family: 'Source Sans Pro';
+    margin-bottom: 1rem;
+    text-align: center;
+    color:#fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    text-align: center;
+     
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-column ul li a  {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    text-align: center;
+    color: #fff;
+}
+.footer-social {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.social-icons a {
+    margin: 0 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #cbd5e0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+     color: #fff;;
+}
+.footer-bottom p 
+{
+    color: #fff;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+      width: 90%;
+      margin: 0 auto;
+       
+      top: 1rem;
+   
+     
+     
+    }
+    }
